@@ -363,6 +363,12 @@ ul {
   .close {
     display: unset;
   }
+  .pageTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 24px;
+    margin: 15px 0 0;
+  }
   .page-bottom-title {
     font-size: 1.rem;
     margin-top: 25px;
@@ -386,7 +392,7 @@ ul {
     overflow: hidden;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 99;
   }
   .menu-list {
     display: flex !important;

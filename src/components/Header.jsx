@@ -43,6 +43,10 @@ function Header() {
     setisMenuopne(false);
   };
 
+  const LinkClick = () => {
+    setisMenuopne(false);
+  };
+
   return (
     <header className="header" id="header">
       <nav className="container-fluid navbar" aria-label="Main navigation">
@@ -77,7 +81,7 @@ function Header() {
           <ul className="menu-list d-flex p-0 m-0">
             {Headerdata.map((item) => (
               <li key={item.id} className="mx-3">
-                <Link to={item.link} id={`link-${item.id}`}>
+                <Link to={item.link} id={`link-${item.id}`} onClick={LinkClick}>
                   {item.title}
                 </Link>
               </li>

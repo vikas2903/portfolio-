@@ -175,7 +175,7 @@ const Wrapper = styled.div`
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    // z-index: 1000;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -219,7 +219,7 @@ const Wrapper = styled.div`
 
   form {
     padding: 2.3rem 2.2rem;
-    z-index: 10;
+    // z-index: 10;
     overflow: hidden;
     position: relative;
   }
@@ -269,7 +269,7 @@ const Wrapper = styled.div`
     font-size: 0.9rem;
     font-weight: 400;
     pointer-events: none;
-    z-index: 1000;
+    // z-index: 1000;
     transition: 0.5s;
   }
 
@@ -307,7 +307,7 @@ const Wrapper = styled.div`
     padding: 0 0.4rem;
     color: transparent;
     pointer-events: none;
-    z-index: 500;
+    // z-index: 500;
   }
 
   .input-container span:before,
