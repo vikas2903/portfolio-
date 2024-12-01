@@ -342,7 +342,9 @@ ul {
 #icon-menu {
   display: none;
 }
+.close{display: none;}
 @media (max-width: 800px) {
+  .close{display: unset;}
   svg#icon-menu {
     fill: #fff;
     color: #fff;
