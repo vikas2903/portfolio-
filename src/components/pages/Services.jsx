@@ -11,12 +11,12 @@ function Services() {
       max-width: 75%;
       margin: 0 auto;
     }
-.time-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-}
+    .time-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
     .countdown {
       display: flex;
       justify-content: space-between;
@@ -88,14 +88,28 @@ function Services() {
         opacity: 0;
       }
     }
-      @media (max-width: 768px) {
-        .countdown {
-          font-size: 24px;
-          flex-wrap: wrap;
-          gap: 10px;
-        }
-          .countdown-container{max-width: 100%;}
+      .full-height {
+    height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+    @media (max-width: 768px) {
+      .countdown {
+        font-size: 24px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+              .full-height {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+      .countdown-container {
+        max-width: 100%;
+      }
+    }
   `;
 
   const [timeLeft, settimeleft] = useState({
@@ -136,25 +150,27 @@ function Services() {
   }, []);
   return (
     <Wraper>
-      <div className="container-fluid">
-        <h1 className="cmg-soon">Comming soon</h1>
-        <div className="countdown-container">
-          <div className="countdown" id="countdown">
-            <div className="time-box">
-              <span id="days">{timeLeft.days}</span>
-              <div className="label">Days</div>
-            </div>
-            <div className="time-box">
-              <span id="hours">{timeLeft.hours}</span>
-              <div className="label">Hours</div>
-            </div>
-            <div className="time-box">
-              <span id="minutes">{timeLeft.minutes}</span>
-              <div className="label">Minutes</div>
-            </div>
-            <div className="time-box">
-              <span id="seconds">{timeLeft.seconds}</span>
-              <div className="label">Seconds</div>
+      <div className="full-height">
+        <div className="container-fluid">
+          <h1 className="cmg-soon">Comming soon</h1>
+          <div className="countdown-container">
+            <div className="countdown" id="countdown">
+              <div className="time-box">
+                <span id="days">{timeLeft.days}</span>
+                <div className="label">Days</div>
+              </div>
+              <div className="time-box">
+                <span id="hours">{timeLeft.hours}</span>
+                <div className="label">Hours</div>
+              </div>
+              <div className="time-box">
+                <span id="minutes">{timeLeft.minutes}</span>
+                <div className="label">Minutes</div>
+              </div>
+              <div className="time-box">
+                <span id="seconds">{timeLeft.seconds}</span>
+                <div className="label">Seconds</div>
+              </div>
             </div>
           </div>
         </div>
