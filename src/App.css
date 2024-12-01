@@ -346,8 +346,8 @@ ul {
   svg#icon-menu {
     fill: #fff;
     color: #fff;
-    height: 20px;
-    width: auto;
+    height: 22px;
+    width: 22px;
     display: unset;
   }
   div#menu {
@@ -401,6 +401,17 @@ ul {
   .project-image {
     grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
     gap: 20px;
+  }
+  .sticky .toggle-icon {
+    position: fixed;
+    right: 01rem;
+  
+    background: #d29c19;
+    padding: 10px 9px;
+    border-radius: 50%;
+    line-height: normal;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
   }
 }
 @media (max-width: 480px) {
