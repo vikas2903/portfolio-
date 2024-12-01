@@ -416,7 +416,7 @@ ul {
 }
 @media (max-width: 480px) {
   .project-image {
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); 
     gap: 15px;
   }
   h1.hero-title {
