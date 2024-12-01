@@ -404,7 +404,7 @@ ul {
   }
   .sticky .toggle-icon {
     position: fixed;
-    right: 01rem;
+    right: 2rem;
   
     background: #d29c19;
     padding: 10px 9px;
