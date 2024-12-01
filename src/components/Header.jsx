@@ -79,7 +79,7 @@ function Header() {
 
         <div className={`menu ${isMenuopen ? "active" : ""}`} id="menu">
           <div className="close" onClick={closeMenu}>
-            &#128473;
+            X
           </div>
           <ul className="menu-list d-flex p-0 m-0">
             {Headerdata.map((item) => (
