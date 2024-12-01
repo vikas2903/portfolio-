@@ -49,7 +49,7 @@ function Header() {
         <div className="site-logo">
           <div className="logo-image">
             <p className="logo-text">
-              VIKSA <span>PRASAD</span>
+              VIKAS <span>PRASAD</span>
             </p>
           </div>
         </div>
