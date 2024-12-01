@@ -359,6 +359,13 @@ ul {
   margin-top: 43px;
   letter-spacing: 1px;
 }
+.cmg-soon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
 @media (max-width: 800px) {
   .close {
     display: unset;

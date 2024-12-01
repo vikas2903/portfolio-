@@ -175,7 +175,7 @@ const Wrapper = styled.div`
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-    // z-index: 1000;
+    z-index:2 ;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -489,6 +489,7 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 480px) {
+  .form{z-index: 0;}
     .container {
       padding: 1.5rem;
     }

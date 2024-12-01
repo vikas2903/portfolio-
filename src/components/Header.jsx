@@ -9,29 +9,30 @@ function Header() {
       link: "/",
     },
     {
-      id: 2,
-      title: "About",
-      link: "/about",
+      id: 5,
+      title: "Projects",
+      link: "/projects",
     },
+    // {
+    //   id: 2,
+    //   title: "About",
+    //   link: "/about",
+    // },
+    // {
+    //   id: 3,
+    //   title: "Skills",
+    //   link: "/skills",
+    // },
+
     {
-      id: 3,
-      title: "Skills",
-      link: "/skills",
+      id: 6,
+      title: "Contact",
+      link: "/contact",
     },
     {
       id: 4,
       title: "Services",
       link: "/services",
-    },
-    {
-      id: 5,
-      title: "Projects",
-      link: "/projects",
-    },
-    {
-      id: 6,
-      title: "Contact",
-      link: "/contact",
     },
   ];
 
@@ -77,7 +78,9 @@ function Header() {
         </div>
 
         <div className={`menu ${isMenuopen ? "active" : ""}`} id="menu">
-          <div className="close" onClick={closeMenu}>&#128473;</div>
+          <div className="close" onClick={closeMenu}>
+            &#128473;
+          </div>
           <ul className="menu-list d-flex p-0 m-0">
             {Headerdata.map((item) => (
               <li key={item.id} className="mx-3">
