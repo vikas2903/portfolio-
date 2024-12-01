@@ -422,8 +422,8 @@ ul {
   h1.hero-title {
     font-size: 2rem;
     font-family: "Figtree";
-    font-weight: 700;
-    line-height: 44px;
+    font-weight: 700; 
+    line-height: 44px; 
   }
   .logo-text {
     font-size: 1.5rem;
