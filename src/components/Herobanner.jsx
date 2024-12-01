@@ -23,7 +23,7 @@ function Herobanner() {
            <div className="info-wrapper glowing-border">
             <div className="info-item info-item-1"><p>{`const information = {`}</p></div>
             <div className="info-item info-item-2"><p>name : <span>'Vikas Prasad',</span></p></div>
-            <div className="info-item info-item-3"><p>role : <span>'Shopify Developer',</span></p></div>
+            <div className="info-item info-item-3"><p>role : <span>'Web Developer',</span></p></div>
             <div className="info-item info-item-4"><p>location : <span>'New Delhi, India',</span></p></div>
             <div className="info-item info-item-5"><p>skills : <span>['Shopify, BigCommerce, WordPress, Reactjs'],</span></p></div>
             <div className="info-item info-item-6"><p>experienceYears  : <span>'2.8 year',</span></p></div>
