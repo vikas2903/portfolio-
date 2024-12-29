@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Projects from "./components/pages/Projects";
 import cc from "./assets/images/1.png";
 import Queries from "./components/pages/Queries";
+import Login from "./components/pages/Login"
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +25,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/customer/queries" element={<Queries />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
 
       <Footer />

@@ -133,6 +133,7 @@ function Contact() {
                     name="name"
                     className="input"
                     id="name"
+                    required
                     value={formData.name}
                     onChange={handleInputChanges}
                   />
@@ -144,6 +145,7 @@ function Contact() {
                     type="email"
                     name="email"
                     className="input"
+                    required
                     id="email"
                     value={formData.email}
                     onChange={handleInputChanges}
@@ -157,6 +159,7 @@ function Contact() {
                     name="phone"
                     className="input"
                     id="phone"
+                    required
                     value={formData.phone}
                     onChange={handleInputChanges}
                   />
@@ -167,6 +170,7 @@ function Contact() {
                   <textarea
                     name="message"
                     className="input"
+                    required
                     id="message"
                     value={formData.message}
                     onChange={handleInputChanges}
