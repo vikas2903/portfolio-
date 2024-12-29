@@ -1,7 +1,20 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { app } from "../../firebase";
+import { getDatabase, ref, set } from "firebase/database";
+import { ToastContainer, toast } from "react-toastify";
 
 function Contact() {
+  const db = getDatabase(app);
+  const storeInfirebase = (cq_name, cq_email, cq_phone, query) => {
+    set(ref(db, "customer/queries/" + Date.now()), {
+      cq_name: cq_name,
+      cq_email: cq_email,
+      cq_phone: cq_phone,
+      cq_query: query,
+    });
+  };
+
   const [formData, setformData] = useState({
     name: "",
     email: "",
@@ -20,6 +33,24 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
+    // storeInfirebase(formData.cq_name,formData.cq_email,formData.cq_phone,formData.query);
+    storeInfirebase(
+      formData.name,
+      formData.email,
+      formData.phone,
+      formData.message
+    );
+
+    toast('Form Submitted Successfuly!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light"
+      });
     setformData({
       name: "",
       email: "",
@@ -45,7 +76,7 @@ function Contact() {
   inputs.forEach((input) => {
     input.addEventListener("focus", focusFunc);
     input.addEventListener("blur", blurFunc);
-  }); 
+  });
 
   return (
     <>
@@ -149,6 +180,8 @@ function Contact() {
           </div>
         </div>
       </Wrapper>
+      <ToastContainer />
+     
     </>
   );
 }
@@ -175,7 +208,7 @@ const Wrapper = styled.div`
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-    z-index:2 ;
+    z-index: 2;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -335,6 +368,7 @@ const Wrapper = styled.div`
     top: 0;
     transform: translateY(-50%);
     left: 25px;
+    z-index: 1000;
     font-size: 0.8rem;
   }
 
@@ -489,7 +523,9 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-  .form{z-index: 0;}
+    .form {
+      z-index: 0;
+    }
     .container {
       padding: 1.5rem;
     }
