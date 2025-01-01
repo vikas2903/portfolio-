@@ -13,6 +13,7 @@ import Projects from "./components/pages/Projects";
 import cc from "./assets/images/1.png";
 import Queries from "./components/pages/Queries";
 import Login from "./components/pages/Login"
+import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <BrowserRouter>
@@ -29,6 +30,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <ToastContainer />
     </BrowserRouter>
   );
 }
