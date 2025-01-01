@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import {toast} from "react-toastify";
 
 function Services() {
   const Wraper = styled.div`
@@ -150,6 +151,7 @@ function Services() {
   }, []);
   return (
     <Wraper>
+      
       <div className="full-height">
         <div className="container-fluid">
           <h1 className="cmg-soon">Comming soon</h1>

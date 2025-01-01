@@ -22,6 +22,11 @@ function Login() {
     mobilenumber: "",
   });
 
+  const [login, setlogin] = useState({
+    email: "",
+    password: "",
+  });
+
   function handleChange(e) {
     const { name, value } = e.target;
     setregister({ ...register, [name]: value });
@@ -67,6 +72,9 @@ function Login() {
 //   };
 
 
+
+  
+
 const registerUser = async () => {
     const auth = getAuth();
     try {
@@ -87,7 +95,7 @@ const registerUser = async () => {
           mobilenumber: register.mobilenumber,
         });
       }
-      toast.success("User Registered Successfully!", {
+      toast.success("User Registered Successfully!", { 
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -105,7 +113,42 @@ const registerUser = async () => {
     }
   };
   
+  function  loginChange (e) {
+    const { name, value } = e.target;
+    setlogin({ ...login, [name]: value });
+  }
+  const loginUser = async () =>{
+    try{
+      const auth = getAuth();
+      const userlogedDetails = await signInWithEmailAndPassword(
+        auth,
+        login.email,
+        login.password
+      );
+      console.log(userlogedDetails);
+      
+  
+      toast.success("Login Successfully!", {
+        position: "top-right",
+      });
+      window.location.href = "/services";
+  
+    }catch(error){
+      console.log(error);
+      toast.error("Login Failed. Please try again.", {
+        position: "top-right",
+      });
+    }
+  }
 
+  function handleloginSubmit (e){
+    e.preventDefault();
+    loginUser();
+    setlogin({
+      email: "",
+      password: "",
+    });
+  }
 function handleSubmit(e) {
     // if (
     //   !register.firstname ||
@@ -139,14 +182,14 @@ function handleSubmit(e) {
     <>
       <div className={`container-login ${pageslide ? "active" : ""}`}>
         <div className="form-box login">
-          <form action="#">
+          <form action="" onSubmit={handleloginSubmit}>
             <h1>Login</h1>
             <div className="input-box">
-              <input type="text" placeholder="Username" required />
+              <input type="text" placeholder="Username" required  value={login.email} name="email" onChange={loginChange}/>
               <i className="bx bxs-user"></i>
             </div>
             <div className="input-box">
-              <input type="password" placeholder="Password" required />
+              <input type="password" placeholder="Password" required value={login.password} name="password" onChange={loginChange}/>
               <i className="bx bxs-lock-alt"></i>
             </div>
             <div className="forgot-link">
